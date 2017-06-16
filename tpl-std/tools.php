@@ -12,7 +12,7 @@
 <h1>Tools</h1>
 
 <h2>Bulk Decrypt Entries</h2>
-<form action="index.php" method="post"  autocomplete='off'>
+<form action="index.php" method="post"  autocomplete="off">
   <p>Passphrase: <input name="pf" value="" size="20" maxlength="200" type="password"/> &nbsp; <input name="bulkdecrypt" value="Decrypt all" type="submit"/></p>
 </form>
 <div class="helptext"><span>This function at once decrypts and displays all entries that can be decrypted with the <i>passphrase</i>.</span></div>
@@ -20,7 +20,7 @@
 <hr/>
 
 <h2>Bulk Change Passphrase</h2>
-<form action="index.php" method="post"  autocomplete='off'>
+<form action="index.php" method="post"  autocomplete="off">
   <p>Old Passphrase: <input name="oldpf" value="" size="20" maxlength="200" type="password"/> &nbsp; New Passphrase: <input name="newpf" value="" size="20" maxlength="200" type="password"/> 
   <input name="bulkchangepf" value="Change all" type="submit"/></p>
 </form>
@@ -29,12 +29,12 @@
 <hr/>
 
 <h2>Import Entries</h2>
-<form action="index.php" method="post" enctype="multipart/form-data"  autocomplete='off'>
+<form action="index.php" method="post" enctype="multipart/form-data"  autocomplete="off">
 <table><tbody>
 <tr><td>Import File: </td><td><input name="MAX_FILE_SIZE" value="30000000" type="hidden"/><input name="importfile" size="50" type="file"/> </td></tr>
 <tr><td>Category: </td><td><select name="importcat" size="1">
 <?php  foreach ($cats as $cat){
-    print "<option>$cat</option>";    
+    print "<option>" . escape_for_html($cat) . "</option>";    
   } ?>
 </select></td></tr>
 <tr><td>Passphrase: </td><td><input name="pf" value="" size="20" maxlength="200" type="password"/> &nbsp; <input name="bulkimportentries" value="Import" type="submit"/></td></tr>
@@ -61,6 +61,8 @@ URL:
 Note:
 </pre>
 </div>
+
+<div class="footer"><span>Password manager powered by <a href="http://simplevault.sourceforge.net">SimpleVault</a></span></div>
 
 </body>
 </html>

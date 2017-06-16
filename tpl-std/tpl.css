@@ -81,6 +81,16 @@ div.rightblock{
 	text-align : right;
 }
 
+div.addentry{
+	padding-top: 4px;
+	float : right;
+	text-align : right;
+}
+
+div.addentry a{
+	text-decoration: none;
+}
+
 
 div.helptext{
   padding-top: 4px;

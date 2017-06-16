@@ -5,7 +5,7 @@
 <?php include "$template/incl-head.php"; ?>
 </head>
 
-<body  onload="document.forms.enterpf.pf.focus()">
+<body onload="document.getElementById('inpfield').focus()">
 
 <?php include "$template/incl-titlebar.php"; ?>
 
