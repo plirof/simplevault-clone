@@ -1,5 +1,57 @@
-# simplevault-clone
-this is a simplevault clone
+SIMPLE VAULT - PASSWORD MANAGER 
+simplevault-1.9_(20150604).tgz
+
+SimpleVault is a web-based tool that allows you to manage passwords 
+or other secret information in a safe way. All secret information is 
+encrypted using strong encryption algorithms. SimpleVault is particularly 
+useful if you want to share secret information within a working group 
+with trusted members.
+
+The website of this Project can be found here: http://simplevault.sourceforge.net/
+This project is kindly hosted by sourceforge.net: http://sourceforge.net/projects/simplevault
+
+The entire project is available under the terms of the Gnu Public License.
 
 
-simplevault15_jonmod_04a_beta_UTF8_CAPTCHA(sch_gr_supports_rijndael-192)!!(20150905b).zip
+INSTALLATION
+
+Prerequisites are: PHP4 or PHP5 with the mcrypt library.
+
+Download and unpack the SimpleVault package to the directory <install-dir>. 
+By default, /var/lib/simplevault/simplevault.txt is used as the vault file 
+where all encrypted and unencrypted data is stored. This file should be 
+readable and writeable by the web server. 
+
+NOTE: You must create the folder /var/lib/simplevault, and assign it permissions
+so that your web server can read and write to that folder. If you are using  
+shared hosting and don't have direct access to the web server, you can change
+the location of the vault file to "vault/simplevault.txt". Ensure that this 
+folder is not accessible from the internet!!
+
+Several configuration options, including the path to the vault file, can
+be overridden by editing svconfig.php. By default this file does not exist
+but a sample configuration file exists in svconfig.php-dist.
+
+That's it. Go to <your-host>/<install-dir>/index.php and start creating 
+entries.
+
+A sample vault file can be found in vault/simplevault.txt. This vault file
+by default contains 2 categories and 4 entries for demonstration purposes.
+All entries are encrypted with the pass phrase 'toto'. You can delete the
+entries interactively, or by emptying the vault file.
+
+
+SECURITY CONSIDERATIONS
+
+1) Always use a strong passphrase.
+
+2) Ensure that your vault file is NOT accessible from the internet. If you
+are installing simplevault on your own server, put the simplevault.txt file
+in /var/lib/simplevault so that it is not accessible on the internet. If
+you are using shared hosting, make sure the "vault" subdirectory is not
+accessible from the internet by using .htaccess files, or by making the 
+directory private or password protected using your web host's control panel.
+
+
+(c) Rolf Brugger, Oct 2007
+
